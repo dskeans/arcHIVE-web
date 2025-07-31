@@ -8,97 +8,138 @@
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f4f4f4;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      line-height: 1.6;
+      background-color: #f5e8d2;
+      color: #111;
     }
 
     header {
-      background: repeating-linear-gradient(
-        -45deg,
-        #f9f9f9,
-        #f9f9f9 10px,
-        #ccc 10px,
-        #ccc 20px
-      );
-      width: 100%;
-      padding: 60px 20px 20px;
-      border-bottom: 5px solid black;
+      background: repeating-linear-gradient(-45deg, #f5e8d2, #f5e8d2 10px, #222 10px, #222 20px);
+      padding: 20px;
+      text-align: left;
+      padding-left: 60px;
+      border-bottom: 8px solid black;
     }
 
     .logo {
       font-size: 3em;
       font-weight: bold;
-      letter-spacing: -2px;
     }
 
     .logo span:first-child {
       color: #e53935;
-      font-size: 0.67em;
-      vertical-align: middle;
     }
 
     .logo span:last-child {
-      font-style: italic;
+      color: #111;
     }
 
     main {
-      max-width: 700px;
+      max-width: 960px;
+      margin: auto;
       padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .line-art {
-      width: 200px;
-      margin: 20px auto;
+    .symbol {
+      width: 140px;
+      margin: 30px 0;
     }
 
-    .btn {
-      display: inline-block;
-      background: black;
-      color: white;
+    .cta-button {
+      background-color: #e53935;
+      color: #111;
       padding: 12px 24px;
-      text-decoration: none;
       font-weight: bold;
-      border-radius: 4px;
-      margin-top: 30px;
-      transition: background 0.3s;
+      font-size: 1em;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      margin: 20px 0 40px;
     }
 
-    .btn:hover {
-      background: #444;
+    .cta-button:hover {
+      background-color: #c62828;
     }
 
-    section.uses {
-      margin-top: 50px;
-      text-align: left;
+    h1 {
+      font-size: 1.8em;
+      text-align: center;
+      margin-bottom: 10px;
     }
 
-    section.uses h2 {
-      border-left: 5px solid black;
-      padding-left: 12px;
-      font-size: 1.5em;
-      margin-bottom: 20px;
+    p {
+      text-align: center;
+      max-width: 700px;
+      font-size: 1.05em;
     }
 
-    .use-case {
-      margin-bottom: 25px;
-      border-left: 3px solid #e53935;
+    .real-world {
+      width: 100%;
+      margin-top: 60px;
+    }
+
+    .real-world h2 {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+      font-weight: bold;
+      border-left: 8px solid #111;
       padding-left: 15px;
     }
 
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #f5e8d2;
+    }
+
+    .card-icon {
+      background-color: #e53935;
+      color: #fff;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .card-text {
+      font-size: 0.95em;
+      color: #111;
+    }
+
     footer {
-      margin-top: 60px;
+      text-align: center;
       font-size: 0.8em;
-      color: #666;
+      color: #555;
+      margin-top: 60px;
+      padding-bottom: 20px;
+    }
+
+    .hidden-email {
+      display: none;
     }
 
     @media (max-width: 600px) {
       .logo {
-        font-size: 2.5em;
+        font-size: 2em;
       }
     }
   </style>
@@ -107,45 +148,55 @@
 
   <header>
     <div class="logo">
-      <span>ARC</span><span>HIVE</span>
+      <span>arc</span><span>HIVE</span>
     </div>
   </header>
 
   <main>
-    <svg class="line-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      <line x1="10" y1="10" x2="90" y2="90" stroke="black" stroke-width="2"/>
-      <line x1="90" y1="10" x2="10" y2="90" stroke="black" stroke-width="2"/>
-      <circle cx="50" cy="50" r="30" stroke="black" stroke-width="2" fill="none"/>
+    <svg class="symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="35" stroke="#111" stroke-width="5" fill="none"/>
+      <line x1="25" y1="25" x2="75" y2="75" stroke="#111" stroke-width="5"/>
+      <line x1="75" y1="25" x2="25" y2="75" stroke="#111" stroke-width="5"/>
     </svg>
 
+    <h1>arcHIVE exists to protect truth in a digital age.</h1>
     <p>
-      arcHIVE exists to protect truth in a digital age.<br/>
       We empower creators, educators, and journalists by providing a decentralized, cryptographically secure platform for capturing, verifying, and preserving authentic media.
     </p>
 
-    <a href="#" class="btn" onclick="sendEmail()">Contact</a>
+    <button class="cta-button" onclick="sendEmail()">START VERIFYING</button>
 
-    <section class="uses">
-      <h2>Real-World Uses</h2>
-
-      <div class="use-case">
-        <strong>📰 Journalists:</strong><br/>
-        Publish photo and video reports with embedded proof of time, location, and authorship using C2PA + blockchain. Protect evidence in war zones or during protests.
-      </div>
-
-      <div class="use-case">
-        <strong>📚 Educators:</strong><br/>
-        Create verifiable educational content — from lectures to original diagrams — that proves originality and prevents AI-generated content confusion.
-      </div>
-
-      <div class="use-case">
-        <strong>🎨 Creators & Artists:</strong><br/>
-        Mint verifiable digital originals for each creative work. Whether it's a photo, beat, or poster, tie your name to it forever using cryptographic tokenization.
-      </div>
-
-      <div class="use-case">
-        <strong>🎥 Filmmakers & Activists:</strong><br/>
-        Document injustice or community stories with verifiable, tamper-proof footage. Ensure your content can’t be dismissed as AI-generated.
+    <section class="real-world">
+      <h2>REAL-WORLD USES</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">📝</div>
+          <div class="card-title">Journalists:</div>
+          <div class="card-text">
+            Publish photo and video reports with embedded proof of time, location, and authorship using C2PA + blockchain. Protect evidence in war zones or during protests.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">👩‍🏫</div>
+          <div class="card-title">Educators:</div>
+          <div class="card-text">
+            Create verifiable educational content—from lectures to original diagrams—that proves originality and prevents AI-generated content confusion.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎨</div>
+          <div class="card-title">Creators & Artists:</div>
+          <div class="card-text">
+            Mint verifiable digital originals for each creative work. Whether it’s a photo, beat, or poster, tie your name to it forever using cryptographic tokenization.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎥</div>
+          <div class="card-title">Filmmakers & Activists:</div>
+          <div class="card-text">
+            Document injustice or community stories with verifiable, tamper-proof footage. Ensure your content can’t be dismissed as AI-generated.
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -154,12 +205,11 @@
     &copy; 2025 arcHIVE. All rights reserved.
   </footer>
 
+  <a class="hidden-email" href="mailto:dhskeans1@gmail.com">Email</a>
+
   <script>
     function sendEmail() {
-      const user = "dhskeans1";
-      const domain = "gmail.com";
-      const link = `mailto:${user}@${domain}`;
-      window.location.href = link;
+      window.location.href = "mailto:dhskeans1@gmail.com";
     }
   </script>
 
