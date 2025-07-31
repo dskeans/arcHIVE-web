@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>arcHIVE — Protecting Truth in a Digital Age</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    header {
+      background: repeating-linear-gradient(
+        -45deg,
+        #f9f9f9,
+        #f9f9f9 10px,
+        #ccc 10px,
+        #ccc 20px
+      );
+      width: 100%;
+      padding: 60px 20px 20px;
+      border-bottom: 5px solid black;
+    }
+
+    .logo {
+      font-size: 3em;
+      font-weight: bold;
+      letter-spacing: -2px;
+    }
+
+    .logo span:first-child {
+      color: #e53935;
+      font-size: 0.67em;
+      vertical-align: middle;
+    }
+
+    .logo span:last-child {
+      font-style: italic;
+    }
+
+    main {
+      max-width: 700px;
+      padding: 40px 20px;
+    }
+
+    .line-art {
+      width: 200px;
+      margin: 20px auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: black;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-top: 30px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #444;
+    }
+
+    section.uses {
+      margin-top: 50px;
+      text-align: left;
+    }
+
+    section.uses h2 {
+      border-left: 5px solid black;
+      padding-left: 12px;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .use-case {
+      margin-bottom: 25px;
+      border-left: 3px solid #e53935;
+      padding-left: 15px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.8em;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span>ARC</span><span>HIVE</span>
+    </div>
+  </header>
+
+  <main>
+    <svg class="line-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <line x1="10" y1="10" x2="90" y2="90" stroke="black" stroke-width="2"/>
+      <line x1="90" y1="10" x2="10" y2="90" stroke="black" stroke-width="2"/>
+      <circle cx="50" cy="50" r="30" stroke="black" stroke-width="2" fill="none"/>
+    </svg>
+
+    <p>
+      arcHIVE exists to protect truth in a digital age.<br/>
+      We empower creators, educators, and journalists by providing a decentralized, cryptographically secure platform for capturing, verifying, and preserving authentic media.
+    </p>
+
+    <a href="#" class="btn" onclick="sendEmail()">Contact</a>
+
+    <section class="uses">
+      <h2>Real-World Uses</h2>
+
+      <div class="use-case">
+        <strong>📰 Journalists:</strong><br/>
+        Publish photo and video reports with embedded proof of time, location, and authorship using C2PA + blockchain. Protect evidence in war zones or during protests.
+      </div>
+
+      <div class="use-case">
+        <strong>📚 Educators:</strong><br/>
+        Create verifiable educational content — from lectures to original diagrams — that proves originality and prevents AI-generated content confusion.
+      </div>
+
+      <div class="use-case">
+        <strong>🎨 Creators & Artists:</strong><br/>
+        Mint verifiable digital originals for each creative work. Whether it's a photo, beat, or poster, tie your name to it forever using cryptographic tokenization.
+      </div>
+
+      <div class="use-case">
+        <strong>🎥 Filmmakers & Activists:</strong><br/>
+        Document injustice or community stories with verifiable, tamper-proof footage. Ensure your content can’t be dismissed as AI-generated.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 arcHIVE. All rights reserved.
+  </footer>
+
+  <script>
+    function sendEmail() {
+      const user = "dhskeans1";
+      const domain = "gmail.com";
+      const link = `mailto:${user}@${domain}`;
+      window.location.href = link;
+    }
+  </script>
+
+</body>
+</html>
