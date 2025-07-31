@@ -4,35 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>arcHIVE — Protecting Truth in a Digital Age</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
       background-color: #f5e8d2;
+      font-family: 'League Gothic', sans-serif;
       color: #111;
     }
-
     header {
-      background: repeating-linear-gradient(-45deg, #f5e8d2, #f5e8d2 10px, #222 10px, #222 20px);
-      padding: 20px;
-      text-align: left;
-      padding-left: 60px;
+      background: repeating-linear-gradient(-45deg, #f5e8d2, #f5e8d2 10px, #ccc 10px, #ccc 20px);
+      padding: 20px 60px;
       border-bottom: 8px solid black;
     }
-
     .logo {
       font-size: 3em;
       font-weight: bold;
     }
-
     .logo span:first-child {
       color: #e53935;
     }
-
     .logo span:last-child {
+      background-color: #f5e8d2;
       color: #111;
+      padding: 0 6px;
+      box-shadow: 6px 0 0 #f5e8d2, -6px 0 0 #f5e8d2;
     }
-
     main {
       max-width: 960px;
       margin: auto;
@@ -40,13 +37,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
-
     .symbol {
       width: 140px;
       margin: 30px 0;
     }
-
     .cta-button {
       background-color: #e53935;
       color: #111;
@@ -58,73 +54,39 @@
       cursor: pointer;
       margin: 20px 0 40px;
     }
-
-    .cta-button:hover {
-      background-color: #c62828;
-    }
-
-    h1 {
-      font-size: 1.8em;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      max-width: 700px;
-      font-size: 1.05em;
-    }
-
-    .real-world {
+    section.uses, section.c2pa {
       width: 100%;
-      margin-top: 60px;
     }
-
-    .real-world h2 {
+    section.uses h2, section.c2pa h2 {
       font-size: 1.8em;
       margin-bottom: 30px;
       font-weight: bold;
       border-left: 8px solid #111;
       padding-left: 15px;
+      text-align: left;
     }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 40px;
+      text-align: left;
     }
-
     .card {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      background-color: #f5e8d2;
+      background: #f5e8d2;
     }
-
     .card-icon {
-      background-color: #e53935;
-      color: #fff;
       width: 64px;
       height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      font-size: 32px;
       margin-bottom: 15px;
     }
-
     .card-title {
       font-weight: bold;
-      margin-bottom: 10px;
       font-size: 1.1em;
+      margin-bottom: 10px;
     }
-
     .card-text {
       font-size: 0.95em;
-      color: #111;
     }
-
     footer {
       text-align: center;
       font-size: 0.8em;
@@ -132,86 +94,48 @@
       margin-top: 60px;
       padding-bottom: 20px;
     }
-
-    .hidden-email {
-      display: none;
-    }
-
-    @media (max-width: 600px) {
-      .logo {
-        font-size: 2em;
-      }
-    }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="logo">
-      <span>arc</span><span>HIVE</span>
-    </div>
+    <div class="logo"><span>arc</span><span>HIVE</span></div>
   </header>
-
   <main>
     <svg class="symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
       <circle cx="50" cy="50" r="35" stroke="#111" stroke-width="5" fill="none"/>
       <line x1="25" y1="25" x2="75" y2="75" stroke="#111" stroke-width="5"/>
       <line x1="75" y1="25" x2="25" y2="75" stroke="#111" stroke-width="5"/>
     </svg>
-
     <h1>arcHIVE exists to protect truth in a digital age.</h1>
-    <p>
-      We empower creators, educators, and journalists by providing a decentralized, cryptographically secure platform for capturing, verifying, and preserving authentic media.
-    </p>
+    <p>We empower creators, educators, and journalists by providing a decentralized, cryptographically secure platform for capturing, verifying, and preserving authentic media.</p>
+    <button class="cta-button" onclick="window.location.href='mailto:dhskeans1@gmail.com'">START VERIFYING</button>
 
-    <button class="cta-button" onclick="sendEmail()">START VERIFYING</button>
-
-    <section class="real-world">
+    <section class="uses">
       <h2>REAL-WORLD USES</h2>
       <div class="grid">
-        <div class="card">
-          <div class="card-icon">📝</div>
-          <div class="card-title">Journalists:</div>
-          <div class="card-text">
-            Publish photo and video reports with embedded proof of time, location, and authorship using C2PA + blockchain. Protect evidence in war zones or during protests.
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">👩‍🏫</div>
-          <div class="card-title">Educators:</div>
-          <div class="card-text">
-            Create verifiable educational content—from lectures to original diagrams—that proves originality and prevents AI-generated content confusion.
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">🎨</div>
-          <div class="card-title">Creators & Artists:</div>
-          <div class="card-text">
-            Mint verifiable digital originals for each creative work. Whether it’s a photo, beat, or poster, tie your name to it forever using cryptographic tokenization.
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">🎥</div>
-          <div class="card-title">Filmmakers & Activists:</div>
-          <div class="card-text">
-            Document injustice or community stories with verifiable, tamper-proof footage. Ensure your content can’t be dismissed as AI-generated.
-          </div>
-        </div>
+        <div class="card"><img src="icons/notepad.svg" class="card-icon"><div class="card-title">Journalists</div><div class="card-text">Proof-of-location and authorship for war zone footage or protest documentation.</div></div>
+        <div class="card"><img src="icons/teacher.svg" class="card-icon"><div class="card-title">Educators</div><div class="card-text">Validate lectures and curriculum material to prevent AI confusion.</div></div>
+        <div class="card"><img src="icons/palette.svg" class="card-icon"><div class="card-title">Artists</div><div class="card-text">Timestamp digital art with immutable ownership records.</div></div>
+        <div class="card"><img src="icons/camera.svg" class="card-icon"><div class="card-title">Filmmakers</div><div class="card-text">Embed metadata and hash for authenticity and chain-of-custody.</div></div>
+        <div class="card"><img src="icons/museum.svg" class="card-icon"><div class="card-title">Curators & Museums</div><div class="card-text">Preserve digital exhibits and provenance of historical assets.</div></div>
+        <div class="card"><img src="icons/government.svg" class="card-icon"><div class="card-title">Government</div><div class="card-text">Archive official records and public comms with proof of issuance.</div></div>
       </div>
+    
+</section>
+
+    <section class="c2pa">
+      <h2>TWO-FACTOR PROVENANCE</h2>
+      <p><strong>arcHIVE complements C2PA like 2FA complements a password.</strong> Even if centralized content signatures are compromised, arcHIVE ensures media can still be verified through self-signed keys, IPFS hashes, and on-chain tokenization.</p>
+      <p>This model of <em>decentralized assurance layered over centralized infrastructure</em> restores media trust from the edge — not just the cloud.</p>
+      <a href="arcHIVE_C2PA_paper.pdf" class="cta-button" download>📄 Download the Full Paper</a>
+    </section>
+
+      <h2>WHY C2PA MATTERS</h2>
+      <p>C2PA (Coalition for Content Provenance and Authenticity) provides a universal, open standard to embed content origin, editing history, and trust signals directly inside media files. With arcHIVE, every photo, video, or document carries its own proof of integrity, tamper-resistance, and author identity — all cryptographically verifiable.</p>
     </section>
   </main>
-
   <footer>
     &copy; 2025 arcHIVE. All rights reserved.
   </footer>
-
-  <a class="hidden-email" href="mailto:dhskeans1@gmail.com">Email</a>
-
-  <script>
-    function sendEmail() {
-      window.location.href = "mailto:dhskeans1@gmail.com";
-    }
-  </script>
-
 </body>
 </html>
